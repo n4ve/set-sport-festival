@@ -32,3 +32,8 @@ $('#green').click(function(){
 $('#yellow').click(function(){
     table.ajax.url("/api/score/yellow").load();
 }); 
+
+$(".btn-group > .btn").click(function(){
+    $(".btn-group > .btn").removeClass("active");
+    $(this).addClass("active");
+});
