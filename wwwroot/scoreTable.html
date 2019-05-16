@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>node.js - Demo mot SQLite - Magne Alvheim</title>
+    <title>Scoring</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -14,8 +14,8 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!-- Toastr -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Data Table -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
 </head>
 
@@ -31,8 +31,8 @@
     <!--script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script -->    
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>      
    
-    <!-- Toastr javascript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Data Table javascript -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
     <body>
 
@@ -44,8 +44,8 @@
                 <div class="row">
                     <h2>Score</h2>
                 </div>
-                
-                <div class="btn-group">
+
+                <div class="btn-group" style="padding-bottom: 20px">
                         <button id="red" type="button" class="btn btn-danger">Red</button>        
                         <button id="green" type="button" class="btn btn-success">Green</button>                  
                         <button id="blue" type="button" class="btn btn-primary">Blue</button>   
@@ -63,8 +63,6 @@
                                 <th>Team</th>
                                 <th>Date</th>  
                             </thead>
-                            <tbody>
-                            </tbody>
                         </table>
                     </div>
                 </div>                                                          
@@ -75,24 +73,6 @@
             </div>
 
         </div><!-- /.container -->       
-        
-        <!-- Modal error message -->
-        <div class="modal fade" id="ajax-error-box" role="dialog">
-            <div class="modal-dialog modal-lg" class="background-color: #dff0d8">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
-                    </div>
-                    <div class="modal-body">
-                        <span id="ajax-error">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <script src="/js/ajaxProxy.js"></script> 
