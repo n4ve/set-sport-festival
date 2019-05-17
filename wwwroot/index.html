@@ -17,6 +17,9 @@
     <!-- Data Table -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+
 </head>
 
     <script
@@ -34,6 +37,10 @@
     <!-- Data Table javascript -->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
+    <!-- Date Picker javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
     <body>
 
 
@@ -42,15 +49,41 @@
             <div class="jumbotron" style="background-color: #f0f4f5; padding-top: 20px"> 
                                           
                 <div class="row">
-                    <h2>Score</h2>
+                    <h2>Running Score</h2>
                 </div>
+                
+                <div class="row">
+                        <div class="col-md-3 btn-group btn-group-toggle" data-toggle="buttons" style="padding-bottom: 20px">
+                                <button id="red" type="button" class="btn btn-danger active">Red</button>        
+                                <button id="green" type="button" class="btn btn-success">Green</button>                  
+                                <button id="blue" type="button" class="btn btn-primary">Blue</button>   
+                                <button id="yellow" type="button" class="btn btn-warning">Yellow</button>
+                        </div>
+        
+                        <div class='col-md-2'>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimePickerStart'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='col-md-2'>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimePickerEnd'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                
 
-                <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding-bottom: 20px">
-                        <button id="red" type="button" class="btn btn-danger active">Red</button>        
-                        <button id="green" type="button" class="btn btn-success">Green</button>                  
-                        <button id="blue" type="button" class="btn btn-primary">Blue</button>   
-                        <button id="yellow" type="button" class="btn btn-warning">Yellow</button>
-                </div>
+                
                 
 
                 <div class="row">
