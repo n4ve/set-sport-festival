@@ -19,11 +19,9 @@ var upload = multer({ dest: 'uploads/' })
 require('./ScoreController')(app, db, jsonParser);
 require('./UploadScoreController')(app, db, csv, upload);
  
-// Serve static files
-app.get('/', function(request, response) {
-    response.sendfile(__dirname + '/wwwroot/index.html');
-})
-app.use(express.static(__dirname + '/wwwroot'));
+app.get('/', function (req, res) {
+    res.send('Hellow');
+});
 
 
 console.log('Listening Port ' + process.env.PORT || 3000);
