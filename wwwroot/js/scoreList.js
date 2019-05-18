@@ -32,10 +32,9 @@ var table = $('#scoreTable').DataTable( {
         dataSrc : ""
     },
     columns: [
-        { data: 'account_id' },
-        { data: 'score' },
-        { data: 'fullname' },
         { data: 'team' },
+        { data: 'fullname' },
+        { data: 'score' },
         { data: 'date' }
     ]
 } );

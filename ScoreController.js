@@ -15,7 +15,6 @@ module.exports = function(app, db, jsonParser){
         let startDateCondition = startDate != "\'\'" ? (" AND date >= " + startDate) : ""
         let endDateCondition = endDate != "\'\'" ? (" AND date <= " + endDate) : ""
         let sql = "SELECT * FROM score WHERE team == \"RED\""  + startDateCondition + endDateCondition
-        console.log(sql)
         db.all(sql, function(err, rows) {
             res.json(rows); 
         });                       

@@ -7,6 +7,14 @@ body {
     background-color: #ece0b7;
   }
 
+  .btn-group.special {
+    display: flex;
+  }
+  
+  .special .btn {
+    flex: 1
+  }
+
   .harry-bg {
     background: #ece0b7;
   }
@@ -14,6 +22,72 @@ body {
   .container {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .font-dbhelven {
+    font-family: DBHelvethaicaMonX;
+  }
+
+  .font-harry {
+    font-family: MagicSchoolOne
+  }
+
+  html {
+    font-size: 20px;
+  }
+
+
+  @media (max-width: 768px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    html {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 392px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 374px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 354px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 317px) {
+    html {
+      font-size: 13px;
+    }
+  }
+
+  body {
+    font-family: "DBHelvethaicaMonX";
+    font-size: 1rem;
+
+  }
+
+  
+  @font-face {
+    font-family: DBHelvethaicaMonX;
+    src: url(fonts/DBHelvethaicaMonX.ttf);
+  }
+
+  @font-face {
+    font-family: MagicSchoolOne;
+    src: url(fonts/MagicSchoolOne.ttf);
   }
 
   

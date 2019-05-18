@@ -51,19 +51,21 @@
             
             <div class="jumbotron harry-bg"> 
                                           
-                <div class="row">
-                    <h2>Running Score</h2>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                            <h1 class="font-harry">Steps Progress</h1>
+                    </div>
                 </div>
                 
-                <div class="row">
-                        <div class="col-md-3 btn-group btn-group-toggle" data-toggle="buttons" style="padding-bottom: 20px">
+                <div class="row text-center">
+                        <div class="col-md-6 btn-group special d-flex btn-group-toggle" data-toggle="buttons" style="padding-bottom: 20px;">
                                 <button id="red" type="button" class="btn btn-danger active">Red</button>        
                                 <button id="green" type="button" class="btn btn-success">Green</button>                  
                                 <button id="blue" type="button" class="btn btn-primary">Blue</button>   
                                 <button id="yellow" type="button" class="btn btn-warning">Yellow</button>
                         </div>
         
-                        <div class='col-md-2'>
+                        <div class='col-md-3'>
                                 <div class="form-group">
                                     <div class='input-group date' id='datetimePickerStart'>
                                         <input type='text' class="form-control" />
@@ -73,7 +75,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class='col-md-2'>
+                            <div class='col-md-3'>
                                 <div class="form-group">
                                     <div class='input-group date' id='datetimePickerEnd'>
                                         <input type='text' class="form-control" />
@@ -89,15 +91,14 @@
                 
                 
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <table id="scoreTable" class="table">
+                <div class="row table-responsive text-nowrap">
+                    <div class="col-lg-12" >
+                        <table id="scoreTable" class="table table-hover d-block d-md-table w-auto w-100 "  width="100%">
                             <thead>
-                                <th>ID</th>     
-                                <th>Score</th>
-                                <th>Name</th>
-                                <th>Team</th>
-                                <th>Date</th>  
+                                <th style="width:25%">Team</th>
+                                <th style="width:25%">Name</th>
+                                <th style="width:25%">Score</th>
+                                <th style="width:25%">Date</th>  
                             </thead>
                         </table>
                     </div>
