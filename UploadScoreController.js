@@ -33,7 +33,7 @@ module.exports = function(app,db,csv, upload) {
 
             // perform some operation with the data
             // ...
-            var insert = 'INSERT INTO score (account_id, fullname, team, date, score) VALUES (?,?,?,?,?)'
+            var insert = 'INSERT OR REPLACE INTO score (account_id, fullname, team, date, score) VALUES (?,?,?,?,?)'
             db.run(insert,[accountId,fullname,team,date,score])
         })
         // when the end of the CSV document is reached
