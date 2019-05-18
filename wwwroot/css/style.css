@@ -1,0 +1,20 @@
+body {
+    background-image: url(../resource/bg.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #ece0b7;
+  }
+
+  .harry-bg {
+    background: #ece0b7;
+  }
+
+  .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  
+  
