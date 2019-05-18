@@ -20,7 +20,7 @@ require('./ScoreController')(app, db, jsonParser);
 require('./UploadScoreController')(app, db, csv, upload);
  
 // Serve static files
-app.use(express.static(__dirname + 'wwwroot'));
+app.use(express.static(__dirname + '/wwwroot'));
 
 
 console.log('Listening Port ' + process.env.PORT || 3000);
