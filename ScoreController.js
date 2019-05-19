@@ -15,6 +15,7 @@ module.exports = function(app, db, jsonParser){
         let startDateCondition = startDate != "\'\'" ? (" AND date >= " + startDate) : ""
         let endDateCondition = endDate != "\'\'" ? (" AND date <= " + endDate) : ""
         let sql = "SELECT * FROM score WHERE team == \"RED\""  + startDateCondition + endDateCondition
+        console.log(sql);
         db.all(sql, function(err, rows) {
             res.json(rows); 
         });                       
@@ -22,24 +23,27 @@ module.exports = function(app, db, jsonParser){
 
     console.log("Registering endpoint: /api/score/blue");
     app.get('/api/score/blue', function(req, res){ 
-        let startDate = req.query.startDate;
-        let endDate = req.query.endDate;
+        let startDate = "\'" + req.query.startDate + "\'";
+        let endDate = "\'" + req.query.endDate + "\'";
 
-        let startDateCondition = startDate != "" ? ("AND date >= " + startDate) : ""
-        let endDateCondition = endDate != "" ? ("AND date <= " + endDate) : ""
-        db.all("SELECT * FROM score WHERE team == \"BLUE\""  + startDateCondition + endDateCondition, function(err, rows) {
+        let startDateCondition = startDate != "\'\'" ? (" AND date >= " + startDate) : ""
+        let endDateCondition = endDate != "\'\'" ? (" AND date <= " + endDate) : ""
+        let sql = "SELECT * FROM score WHERE team == \"BLUE\""  + startDateCondition + endDateCondition
+        console.log(sql);
+        db.all(sql, function(err, rows) {
             res.json(rows); 
         });                        
     });
 
     console.log("Registering endpoint: /api/score/green");
     app.get('/api/score/green', function(req, res){ 
-        let startDate = req.query.startDate;
-        let endDate = req.query.endDate;
+        let startDate = "\'" + req.query.startDate + "\'";
+        let endDate = "\'" + req.query.endDate + "\'";
 
-        let startDateCondition = startDate != "" ? ("AND date >= " + startDate) : ""
-        let endDateCondition = endDate != "" ? ("AND date <= " + endDate) : ""
+        let startDateCondition = startDate != "\'\'" ? (" AND date >= " + startDate) : ""
+        let endDateCondition = endDate != "\'\'" ? (" AND date <= " + endDate) : ""
         let sql = "SELECT * FROM score WHERE team == \"GREEN\""  + startDateCondition + endDateCondition
+        console.log(sql);
         db.all(sql, function(err, rows) {
             res.json(rows); 
         });                        
@@ -47,24 +51,30 @@ module.exports = function(app, db, jsonParser){
 
     console.log("Registering endpoint: /api/score/yellow");
     app.get('/api/score/yellow', function(req, res){ 
-        let startDate = req.query.startDate;
-        let endDate = req.query.endDate;
+        let startDate = "\'" + req.query.startDate + "\'";
+        let endDate = "\'" + req.query.endDate + "\'";
 
-        let startDateCondition = startDate != "" ? ("AND date >= " + startDate) : ""
-        let endDateCondition = endDate != "" ? ("AND date <= " + endDate) : ""
-        db.all("SELECT * FROM score WHERE team == \"YELLOW\""  + startDateCondition + endDateCondition, function(err, rows) {
+        let startDateCondition = startDate != "\'\'" ? (" AND date >= " + startDate) : ""
+        let endDateCondition = endDate != "\'\'" ? (" AND date <= " + endDate) : ""
+        let sql = "SELECT * FROM score WHERE team == \"YELLOW\""  + startDateCondition + endDateCondition
+        console.log(sql);
+        db.all(sql, function(err, rows) {
             res.json(rows); 
         });                        
     });
 
     console.log("Registering endpoint: /api/score");
     app.get('/api/score', function(req, res){ 
-        let startDate = req.query.startDate;
-        let endDate = req.query.endDate;
+        let startDate = "\'" + req.query.startDate + "\'";
+        let endDate = "\'" + req.query.endDate + "\'";
 
-        let startDateCondition = startDate != "" ? ("AND date >= " + startDate) : ""
-        let endDateCondition = endDate != "" ? ("AND date <= " + endDate) : ""
-        let sql = "SELECT * FROM score"  + startDateCondition + endDateCondition;
+        let startDateCondition = startDate != "\'\'" ? ("date >= " + startDate) : ""
+        let endDateCondition = endDate != "\'\'" ? ( (startDate != null ? " AND " : "") + "date <= " + endDate) : ""
+
+        var condition = ""
+
+        if( startDateCondition != "" || endDateCondition != "") condition = " WHERE " + startDateCondition + endDateCondition
+        let sql = "SELECT * FROM score"  + condition;
         console.log(sql);
         db.all(sql , function(err, rows) {
             res.json(rows); 

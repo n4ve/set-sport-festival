@@ -101,9 +101,9 @@ $("#datetimePickerStart").on("dp.change", function (e) {
             break;
         case 'yellow':
             table.ajax.url("/api/score/yellow").load();
+            break;
         case 'all':
             table.ajax.url("/api/score").load();
-            
             break;
         default:
       }
@@ -126,9 +126,9 @@ $("#datetimePickerEnd").on("dp.change", function (e) {
             break;
         case 'yellow':
             table.ajax.url("/api/score/yellow").load();
+            break;
         case 'all':
             table.ajax.url("/api/score").load();
-            
             break;
         default:
       }
