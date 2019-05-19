@@ -33,6 +33,14 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
+app.get('/upload', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.render('upload');
+});
+
+
+
 
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}/`);
