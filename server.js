@@ -33,10 +33,28 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
+app.get('/search', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.render('search');
+});
+
 app.get('/upload', function(req, res) {
 
     // ejs render automatically looks in the views folder
     res.render('upload');
+});
+
+app.get('/around-the-world', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.render('around-the-world');
+});
+
+app.get('/ranking', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.render('ranking');
 });
 
 

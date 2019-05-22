@@ -5,6 +5,18 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-color: #ece0b7;
+    height: 100%;
+    width: 100%;
+  }
+
+  .logo-size {
+    width: 300px;
+    height: 300px;
+  }
+
+  .logo-size-xl {
+    width: 400px;
+    height: 400px;
   }
 
   .btn-group.special {
@@ -15,14 +27,23 @@ body {
     flex: 1
   }
 
-  .harry-bg {
+  .brown-bg {
     background: #ece0b7;
   }
 
   .container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+    height: 100%;
+    width: 100%;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
 
   .font-dbhelven {
     font-family: DBHelvethaicaMonX;
@@ -34,6 +55,8 @@ body {
 
   html {
     font-size: 20px;
+    height: 100%;
+    width: 100%;
   }
 
 
@@ -47,11 +70,27 @@ body {
     html {
       font-size: 17px;
     }
+    .logo-size {
+      width: 240px;
+      height: 240px;
+    }
+    .logo-size-xl {
+      width: 350px;
+      height: 350px;
+    }
   }
 
   @media (max-width: 392px) {
     html {
       font-size: 16px;
+    }
+    .logo-size {
+      width: 200px;
+      height: 200px;
+    }
+    .logo-size-xl {
+      width: 250px;
+      height: 250px;
     }
   }
 
@@ -70,6 +109,14 @@ body {
   @media (max-width: 317px) {
     html {
       font-size: 13px;
+    }
+    .logo-size {
+      width: 180px;
+      height: 180px;
+    }
+    .logo-size-xl {
+      width: 275px;
+      height: 275px;
     }
   }
 
