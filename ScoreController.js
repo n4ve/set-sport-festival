@@ -80,4 +80,48 @@ module.exports = function(app, db, jsonParser){
             res.json(rows); 
         });                        
     });
+
+    console.log("Registering endpoint: /api/around-the-world/red");
+    app.get('/api/around-the-world/red', function(req, res){ 
+    
+        let sql = "SELECT SUM(score) AS total FROM score WHERE team == \"RED\" AND date >= \"2019-04-01\" AND date <= \"2019-08-01\"";
+        console.log(sql);
+        db.all(sql , function(err, rows) {
+            console.log(rows);
+            res.json(rows); 
+        });                        
+    });
+
+    console.log("Registering endpoint: /api/around-the-world/blue");
+    app.get('/api/around-the-world/blue', function(req, res){ 
+    
+        let sql = "SELECT SUM(score) AS total FROM score WHERE team == \"BLUE\" AND date >= \"2019-04-01\" AND date <= \"2019-08-01\"";
+        console.log(sql);
+        db.all(sql , function(err, rows) {
+            res.json(rows); 
+        });                        
+    });
+
+    console.log("Registering endpoint: /api/around-the-world/green");
+    app.get('/api/around-the-world/green', function(req, res){ 
+    
+        let sql = "SELECT SUM(score) AS total FROM score WHERE team == \"GREEN\" AND date >= \"2019-04-01\" AND date <= \"2019-08-01\"";
+        console.log(sql);
+        db.all(sql , function(err, rows) {
+            res.json(rows); 
+        });                        
+    });
+
+    console.log("Registering endpoint: /api/around-the-world/yellow");
+    app.get('/api/around-the-world/yellow', function(req, res){ 
+    
+        let sql = "SELECT SUM(score) AS total FROM score WHERE team == \"YELLOW\" AND date >= \"2019-04-01\" AND date <= \"2019-08-01\"";
+        console.log(sql);
+        db.all(sql , function(err, rows) {
+            res.json(rows); 
+        });                        
+    });
+
+
+
 }
