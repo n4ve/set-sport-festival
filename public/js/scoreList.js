@@ -21,7 +21,7 @@ function getEnd() {
 }
 
 var table = $('#scoreTable').DataTable( {
-    searching: false,
+    searching: true,
     dataSrc : "",
     ajax : {
         url : "/api/score/red",
