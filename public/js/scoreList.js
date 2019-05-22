@@ -34,7 +34,7 @@ var table = $('#scoreTable').DataTable( {
     columns: [
         { data: 'team' },
         { data: 'fullname' },
-        { data: 'score' },
+        { data: 'score' , render: $.fn.dataTable.render.number( ',')},
         { data: 'date' }
     ]
 } );
