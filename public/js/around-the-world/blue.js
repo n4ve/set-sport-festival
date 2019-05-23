@@ -7,7 +7,7 @@ $(".btn-group > .btn").click(function(){
 $.get("/api/around-the-world/blue", function(data){
     
     let totalScore = data[0].total != null ? data[0].total : 0
-    $("#total").text(totalScore + "/ 58,933,823");
+    $("#total").text(totalScore.toLocaleString()  + "/ 58,933,823");
     let percent = (totalScore / 58933823 * 100).toFixed(2);
     $("#progress").attr("data-value", percent)
   });
