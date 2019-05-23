@@ -45,19 +45,32 @@ app.get('/upload', function(req, res) {
     res.render('upload');
 });
 
-app.get('/around-the-world', function(req, res) {
-
-    // ejs render automatically looks in the views folder
-    res.render('around-the-world');
-});
-
 app.get('/ranking', function(req, res) {
 
     // ejs render automatically looks in the views folder
     res.render('ranking');
 });
 
+app.get('/around-the-world/red', function(req, res) {
 
+    // ejs render automatically looks in the views folder
+    res.render('around-the-world-red');
+});
+app.get('/around-the-world/blue', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.render('around-the-world-blue');
+});
+app.get('/around-the-world/green', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.render('around-the-world-green');
+});
+app.get('/around-the-world/yellow', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.render('around-the-world-yellow');
+});
 
 
 app.listen(port, () => {
